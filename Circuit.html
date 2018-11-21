@@ -6,16 +6,21 @@
 	<link rel="stylesheet" href="assets/rangeslider/rangeslide.css">
 
 </head>
-<body>
+<body style="margin: 0;background-color: lightgrey;">
 	<div id="circuit">
-		<canvas id="circuit-canvas">
+		<canvas id="circuit-canvas" style="display: inline-block;">
 		</canvas>
-		<div style="margin: 0; padding: 0; border-radius: 2px;">
-			<div style="width: 60%">
-				<div id="slider1" style="width: 90%;margin: 0;margin-left: 10%;" ></div>
-			</div>
-			<div style="width: 60%; margin: 0; padding: 0; ">
-				<div id="slider2" style="width: 90%;margin: 0;margin-left: 10%;" ></div>
+		<div id="sliders" style="margin: 0; display: inline-block;position: fixed;">
+			<div style="margin: 5px; border: 2px solid black; border-radius: 5px;padding: 10px;margin-top: 50px;">
+				<label>R1:</label>
+				<div id="slider1"  ></div>
+				<br/><br/>
+				<label>R2:</label>
+				<div id="slider2"  ></div>
+				<br/><br/>
+				<label>R3:</label>
+				<div id="slider3"  ></div>
+				<br/><br/>
 			</div>
 		</div>
 	</div>

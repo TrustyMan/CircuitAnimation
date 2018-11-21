@@ -1,0 +1,11 @@
+.sliderContent{
+	margin: 5px;
+	border: 2px solid black;
+	border-radius: 5px;
+	padding: 10px;
+}
+#sliders{
+	margin: 0;
+	display: inline-block;
+	position: fixed;
+}
