@@ -39,7 +39,7 @@ function circuit_drawing(){
 	
 	var canvas = document.getElementById("circuit-canvas");
 	canvas.width = width*9/14;
-    canvas.height = height/2;
+    canvas.height = height*4/10;
     var lb_color1 = "rgba("+lb_color.r+","+lb_color.g+","+lb_color.b+")";;
     var ctx = canvas.getContext("2d");
     var start_x = canvas.width / 24, end_x = canvas.width*23/24;
