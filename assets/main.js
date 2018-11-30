@@ -38,8 +38,8 @@ function circuit_drawing(){
 	var height = window.innerHeight;
 	
 	var canvas = document.getElementById("circuit-canvas");
-	canvas.width = width*5/7;
-    canvas.height = height;
+	canvas.width = width*9/14;
+    canvas.height = height/2;
     var lb_color1 = "rgba("+lb_color.r+","+lb_color.g+","+lb_color.b+")";;
     var ctx = canvas.getContext("2d");
     var start_x = canvas.width / 24, end_x = canvas.width*23/24;
@@ -73,8 +73,8 @@ function circuit_drawing(){
     	ctx.drawImage(resistor1, start_x+(circuit_width/2-r_width)/2, start_y-r_height/2, r_width, r_height);		//twelve th
     	ctx.font = '48px serif';
     	ctx.fillStyle = "black";
-    	ctx.fillText("R3", end_x-(circuit_width/2-r_width)/2-r_width*2/3, start_y-r_height/2);
-    	ctx.fillText("R1", start_x+(circuit_width/2-r_width)/2+r_width/3, start_y-r_height/2);
+    	ctx.fillText("R3", end_x-(circuit_width/2-r_width)/2-r_width*2/3, start_y+2*r_height);
+    	ctx.fillText("R1", start_x+(circuit_width/2-r_width)/2+r_width/3, start_y+2*r_height);
     }
     resistor2.onload = function(){
     	ctx.drawImage(resistor2, canvas.width/2-r_height/2, canvas.height/2-r_width/2, r_height, r_width);
