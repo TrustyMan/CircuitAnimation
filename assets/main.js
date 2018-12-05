@@ -36,10 +36,13 @@ function image_tag_create(){
 function circuit_drawing(){
 	var width = window.innerWidth;
 	var height = window.innerHeight;
+
+	var slider_content = document.getElementById("slider_content");
+	$(slider_content).attr('height', height/2);
 	
 	var canvas = document.getElementById("circuit-canvas");
 	canvas.width = width*9/14;
-    canvas.height = height*4/10;
+    canvas.height = height*4/10-20;
     var lb_color1 = "rgba("+lb_color.r+","+lb_color.g+","+lb_color.b+")";;
     var ctx = canvas.getContext("2d");
     var start_x = canvas.width / 24, end_x = canvas.width*23/24;
@@ -73,8 +76,8 @@ function circuit_drawing(){
     	ctx.drawImage(resistor1, start_x+(circuit_width/2-r_width)/2, start_y-r_height/2, r_width, r_height);		//twelve th
     	ctx.font = '48px serif';
     	ctx.fillStyle = "black";
-    	ctx.fillText("R3", end_x-(circuit_width/2-r_width)/2-r_width*2/3, start_y+2*r_height);
-    	ctx.fillText("R1", start_x+(circuit_width/2-r_width)/2+r_width/3, start_y+2*r_height);
+    	ctx.fillText("R3", end_x-(circuit_width/2-r_width)/2-r_width*2/3, start_y+3*r_height);
+    	ctx.fillText("R1", start_x+(circuit_width/2-r_width)/2+r_width/3, start_y+3*r_height);
     }
     resistor2.onload = function(){
     	ctx.drawImage(resistor2, canvas.width/2-r_height/2, canvas.height/2-r_width/2, r_height, r_width);
@@ -93,16 +96,22 @@ function circuit_drawing(){
 		ctx.fillEllipse(end_x+lb_width*2/3, canvas.height/2-lb_height/2+lb_height/2, lb_width/3, lb_height/2, 0, 0, 2 * Math.PI);
 		ctx.drawImage(lightbulb, end_x, canvas.height/2-lb_height/2, lb_width, lb_height);
     }
+    var slider1 = document.getElementById("slider1");
+    console.log(slider1);
+
+     document.getElementById("slider2").style.height = height/5;
+     document.getElementById("slider3").style.height = height/5;
+
 }
 $(document).ready(function(){
 	image_tag_create();
 	circuit_drawing();
-	console.log("xxx");
+	// console.log("xxx");
 	sliders();
 	window.addEventListener('resize', function(){
 		image_tag_create();
 		circuit_drawing();
-		console.log("xxx");
+		// console.log("xxx");
 		sliders();
 	});
 });
@@ -117,7 +126,7 @@ function onChange1(arg) {
 	i = i*255/4.0;
 	lb_color.r = i;
 	lb_color.g = i;
-	console.log("aaa:", i);
+	// console.log("aaa:", i);
 	ESresize();
 }
 function onChange2(arg) {
@@ -128,7 +137,7 @@ function onChange2(arg) {
 	i = i*255/4.0;
 	lb_color.r = i;
 	lb_color.g = i;
-	console.log("aaa:", i);
+	// console.log("aaa:", i);
 	ESresize();
 }
 function onChange3(arg) {
@@ -139,7 +148,7 @@ function onChange3(arg) {
 	i = i*255/4.0;
 	lb_color.r = i;
 	lb_color.g = i;
-	console.log("aaa:", i);
+	// console.log("aaa:", i);
 	ESresize();
 }
 var data1 = [
@@ -207,7 +216,7 @@ function sliders(){
 	slider_div.style.width = width*5/21 + "px";
 	slider_div.style.height = height+ "px";
 	slider_div.style.padding = "1%";
-	console.log(slider_div.style.width);
+	// console.log(slider_div.style.width);
 }
 function ESresize(){
 /*

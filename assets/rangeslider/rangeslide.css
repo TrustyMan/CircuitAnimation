@@ -11,6 +11,7 @@
 	-moz-user-select: none;
 	-ms-user-select: none;
 	user-select: none;
+	height: 2px;
 }
 
 .animated {
@@ -110,7 +111,7 @@
     opacity: 0;
     pointer-events: none;
     width: auto;
-    height: auto;
+    height: 24px;
     background-color: #fff;
     border: 1px solid #e0e0e0;
     color: #5a5a5a;
@@ -151,20 +152,23 @@
 	display: inline-block;
 	text-align: center;
 	position: absolute;
+	height: 5px;
 }
 
 .rangeslide .labels-container .tick-label.selected span {
 	padding: 2px;
 	border: 1px solid #999;
+	height: 5px; 
 }
 
 .rangeslide .labels-container .tick-label span {
     display: inline-block;
+    height: 5px;
 }
 
 .rangeslide .labels-container .tick-label:hover {
 	font-weight: bold;
-	cursor: pointer;
+	cursor: pointer;height: 5px;
 }
 
 .rangeslide .labels-container .tick-label .tick {
@@ -174,6 +178,7 @@
 	box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	-webkit-box-sizing: border-box;
+	height: 5px;
 }
 
 .rangeslide .value-indicator {
@@ -238,4 +243,12 @@
 
 .rangeslide .value-indicator.valid {
 	color: #3071a9;
+}
+
+.labels-container .noselect{
+	height: 24px;
+}
+
+.tick .noselect{
+	height: 24px;
 }
