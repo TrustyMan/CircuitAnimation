@@ -74,20 +74,20 @@ function circuit_drawing(){
     resistor1.onload = function(){
     	ctx.drawImage(resistor1, end_x-(circuit_width/2-r_width)/2, start_y-r_height/2, -r_width, r_height);		//nine th
     	ctx.drawImage(resistor1, start_x+(circuit_width/2-r_width)/2, start_y-r_height/2, r_width, r_height);		//twelve th
-    	ctx.font = '48px serif';
+    	ctx.font = '24px serif';
     	ctx.fillStyle = "black";
     	ctx.fillText("R3", end_x-(circuit_width/2-r_width)/2-r_width*2/3, start_y+3*r_height);
     	ctx.fillText("R1", start_x+(circuit_width/2-r_width)/2+r_width/3, start_y+3*r_height);
     }
     resistor2.onload = function(){
     	ctx.drawImage(resistor2, canvas.width/2-r_height/2, canvas.height/2-r_width/2, r_height, r_width);
-    	ctx.font = '48px serif';
+    	ctx.font = '24px serif';
     	ctx.fillStyle = "black";
     	ctx.fillText("R2", canvas.width/2-r_height/2+r_height, canvas.height/2-r_width/2+r_width*2/3);
     }
     battery.onload = function(){
     	ctx.drawImage(battery, start_x-r_height/2, start_y+(circuit_height-r_width)/2, r_height, r_width);	//second
-    	ctx.font = '48px serif';
+    	ctx.font = '24px serif';
     	ctx.fillStyle = "black";
     	ctx.fillText("12V", start_x-r_height/2+r_height+5, start_y+(circuit_height-r_width)/2+r_width/2);
     }
