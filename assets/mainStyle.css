@@ -8,5 +8,6 @@
 #sliders{
 	margin: 0;
 	display: inline-block;
-	position: fixed;
+	/*position: fixed;*/
+	width: 200px;
 }
