@@ -41,7 +41,7 @@ function circuit_drawing(){
 	$(slider_content).attr('height', height/2);
 	
 	var canvas = document.getElementById("circuit-canvas");
-	canvas.width = width*9/14;
+	canvas.width = width*13/14;
     canvas.height = height*6/10-20;
     var lb_color1 = "rgba("+lb_color.r+","+lb_color.g+","+lb_color.b+")";;
     var ctx = canvas.getContext("2d");
